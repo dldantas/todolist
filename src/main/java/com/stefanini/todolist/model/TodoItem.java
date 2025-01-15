@@ -37,15 +37,11 @@ public class TodoItem {
     private Boolean isCompleted;
 
     @Column(nullable = false)
-    private LocalDateTime createdAt;
-
-    @Column(nullable = false)
-    private LocalDateTime updatedAt;
+    private LocalDateTime updatedDate;
 
     @PrePersist
     protected void onCreate() {
-        createdAt = LocalDateTime.now();
-        updatedAt = LocalDateTime.now();
+        updatedDate = LocalDateTime.now();
         if (isCompleted == null) {
             isCompleted = false;
         }
@@ -56,6 +52,6 @@ public class TodoItem {
 
     @PreUpdate
     protected void onUpdate() {
-        updatedAt = LocalDateTime.now();
+        updatedDate = LocalDateTime.now();
     }
 }

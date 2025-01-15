@@ -22,7 +22,7 @@ public class TodoList {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userId", nullable = false)
-    private User user;
+    private TodoUser user;
 
     @Column(nullable = false, length = 100)
     private String title;
@@ -31,20 +31,16 @@ public class TodoList {
     private String description;
 
     @Column(nullable = false)
-    private LocalDateTime createdAt;
-
-    @Column(nullable = false)
-    private LocalDateTime updatedAt;
+    private LocalDateTime updatedDate;
 
     @PrePersist
     protected void onCreate() {
-        createdAt = LocalDateTime.now();
-        updatedAt = LocalDateTime.now();
+        updatedDate = LocalDateTime.now();
     }
 
     @PreUpdate
     protected void onUpdate() {
-        updatedAt = LocalDateTime.now();
+        updatedDate = LocalDateTime.now();
     }
 
     @OneToMany(mappedBy = "todoList", cascade = CascadeType.ALL)
