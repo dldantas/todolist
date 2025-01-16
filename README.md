@@ -1,4 +1,5 @@
 Aplicação de Gerenciamento de Tarefas 
+
 📋 Descrição do Projeto
 Sistema de gerenciamento de tarefas desenvolvido com Spring Boot e Java 21, seguindo os princípios SOLID. O sistema permite criar usuários, listas de tarefas e itens para cada lista.
 
