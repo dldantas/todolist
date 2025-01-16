@@ -12,6 +12,7 @@ Lombok
 JPA/Hibernate
 
 📋 Funcionalidades
+
 Gerenciamento de usuários
 Criação de listas de tarefas
 Adição de itens às listas
@@ -19,6 +20,7 @@ Marcação de itens como concluídos
 Atualização e remoção de tarefas
 
 📋 Endpoints da API
+
 Usuários
 POST /api/users - Criar novo usuário
 GET /api/users - Listar todos usuários
@@ -38,6 +40,7 @@ DELETE /api/todo-lists/{todoListId}/items/{id} - Remover item
 PATCH /api/todo-lists/{todoListId}/items/{id}/toggle - Alternar status de conclusão
 
 📋 Estrutura do Projeto
+
 Copysrc/main/java/com/example/todo/
 ├── model/
 │   ├── TodoUser.java
