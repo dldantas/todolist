@@ -1,10 +1,7 @@
 package com.stefanini.todolist.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -45,5 +42,9 @@ public class TodoList {
 
     @OneToMany(mappedBy = "todoList", cascade = CascadeType.ALL)
     private List<TodoItem> todoItems;
+
+    public void setUser(TodoUser user) {
+        this.user = user;
+    }
 }
 
